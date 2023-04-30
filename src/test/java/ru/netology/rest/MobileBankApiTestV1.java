@@ -20,10 +20,9 @@ class MobileBankApiTestV1 {
                 .post("/post")
 // Проверки
                 .then()
-                .statusCode(200)
+                .statusCode(403)
                 .contentType( ContentType.JSON)
-                .body("data", equalTo("some data"))
-        ;
+                .body("data", equalTo("some data"));
     }
 
 }
